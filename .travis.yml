@@ -1,18 +1,14 @@
 language: php
-
 php:
-  - 7.1
-
+- 7.1
 before_script:
-  - cp .env.travis .env
-  - mysql -e 'create database homestead_test'
-  - composer self-update
-  - composer install --no-interaction
-
+- cp .env.travis .env
+- mysql -e 'create database homestead_test'
+- composer self-update
+- composer install --no-interaction
 script:
-  - vendor/bin/phpunit
-
+- vendor/bin/phpunit
 deploy:
   provider: heroku
   api_key:
-    secure: "da785e6c-1464-4d98-8109-9e8dce9d6e1c"
+    secure: h8PDvzpJHW+/1dcsLDSwzBHAyn3cnTNQiiXD3mEMctp8KCYPaj66XJ7QBKM5eLQa1HF8z6ZEyrtflgFiBs8X9R460uu4GfKRPV855SzBQKawXcK6znEz9QLrHeLcBfF0rJSPhZjNitq/VKPWlAXkHF9d2NS8pS7j8tVs5yvpfQL8Ils7S4GRDBFQTWWQWciC3vnIS4d581/X0Z3Zz95/wFC/q5HdO7ZAqV5weh4bn+K9OXCKG3Dl+n/O4gxuJ6XySTYPZ+2lSPlY/4vuKio+4Ou2SpKJMOXIaobfU9MeHmFaFSRtT6oaI/lHWtAbLBObO5m+WfQMNz9JDbr0or4OY/D1yfPHi7ktbaJaHq7Tx2g4jPVAvFuiNPfS7dTrUo36iZ2dtM0Y8hZa5qeKgaF4cWfYtzc8aLohvIWb9iY+X6YRWwf5fEStIHLhBee2SmspJH59g7Jk39cRpgiI9QjZmyOQMKx2jYePkDsyy5HIKGMNkeKzsGBCjtd/O6LMjdzPbH146ZAjUSOhhXq9O6/nWU03Rj+CzOb2bgK0SrYq8kbZ0HS+rokObDjSUSu1kkzeEFAfMt6K3oVcNJ2vabWNMZy4VhUQ37sOQDyPmA8/LOIBMVa4xHX2ANLMopKeW5OfnzUAn7IdnHGg5ieiVjGmzOCDvaZHWUKmcekV1aFq9Lg=
