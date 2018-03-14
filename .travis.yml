@@ -6,6 +6,7 @@ before_script:
 - mysql -e 'create database homestead_test'
 - composer self-update
 - composer install --no-interaction
+- heroku config:get DATABASE_URL -a jwtbackend
 - php artisan migrate
 script:
 - vendor/bin/phpunit
