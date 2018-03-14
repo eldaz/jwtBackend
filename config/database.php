@@ -1,10 +1,10 @@
 <?php
-    $url = parse_url(env("DATABASE_URL"));
-    $host = $url["host"];
-    $username = $url["user"];
-    $password = $url["pass"];
-    $port = $url["port"];
-    $database = substring($url["path"], 1);
+    // $url = parse_url(env("DATABASE_URL"));
+    // $host = $url["host"];
+    // $username = $url["user"];
+    // $password = $url["pass"];
+    // $port = $url["port"];
+    // $database = substring($url["path"], 1);
 
 return [
 
@@ -77,7 +77,7 @@ return [
         ],
         'pgsql' => [
             'driver' => 'pgsql',
-            'host' => env('DB_HOST', $host),
+            'host' => parse_url(getenv("DATABASE_URL"))["host"],
             'port' => env('DB_PORT', $port),
             'database' => env('DB_DATABASE', $database),
             'username' => env('DB_USERNAME', $username),
