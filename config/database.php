@@ -1,11 +1,4 @@
 <?php
-    // $url = parse_url(env("DATABASE_URL"));
-    // $host = $url["host"];
-    // $username = $url["user"];
-    // $password = $url["pass"];
-    // $port = $url["port"];
-    // $database = substring($url["path"], 1);
-    var_dump(getenv('APP_KEY'));
 
 return [
 
