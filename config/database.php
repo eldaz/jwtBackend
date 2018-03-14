@@ -5,6 +5,7 @@
     // $password = $url["pass"];
     // $port = $url["port"];
     // $database = substring($url["path"], 1);
+    var_dump(getenv('APP_KEY'));
 
 return [
 
